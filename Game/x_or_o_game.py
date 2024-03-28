@@ -76,9 +76,9 @@ def x_or_o_game():
     list_board = default_board()
     while True:
         symbol = input("Введите свой символ")
-        if symbol == " ":
+        if symbol == " " or (symbol != "x" and symbol != "o"):
             symbol = input("Введите свой символ")
-        row =  int(input("Введите строку"))
+        row = int(input("Введите строку"))
         col = int(input("Введите столбец"))
         list_board = display_board(list_board, symbol, row-1, col-1)
         clear_output()
